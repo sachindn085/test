@@ -21,8 +21,8 @@ def generate_options():
     chosen = random.sample(random_words, 4)
     options = [f"{base_text} - {word}" for word in chosen]
 
-    # ✅ Return just the list
-    return jsonify(options)
+    # ✅ Return dict with a list under "options" key
+    return jsonify({"options": options})
 
 
 if __name__ == "__main__":
